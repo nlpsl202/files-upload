@@ -21,6 +21,10 @@ app.use(morgan('dev'));
 //start app 
 const port = process.env.PORT || 3000;
 
+app.get('/', function (req, res) {
+    res.send('hello world');
+});
+
 app.post('/upload-avatar', async (req, res) => {
     try {
         if (!req.files) {
